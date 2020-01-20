@@ -1,0 +1,33 @@
+FLEXBOX, stands for flexible box layout module, not the best name maybe. Basically flexbox allows us to display our elements on our webiste more dynamically or more flexible and this is important as today we have so many different devices to access the website.
+Because of that we need a responsive webiste and this what we can do with FLEXBOX.
+
+
+THEORY.
+
+All starts with a specific property, because we want to add a way an element is displayed and we do by adding the property DISPLAY
+
+For DISPLAY we have different values
+
+- block
+- inline or ...
+- flex ( we then change the behavior of the element because we turn the element adding this declaration into a PARENT or FLEX CONTAINER )
+
+A container normally contains something and this something are :
+  - CHILDREN = FLEX ITEMS
+And this is an important core concept for FLEXBOX that we have to understand because we always add display FLEX to the PARENT element or kind of wrapping element and by that we turn this PARENT or WRAPPING ELEMENT into the FLEX CONTAINER. And inside this container we will have all these different FLEX-ITEMS which are nested elements inside this parent element.
+
+As soon as we've got this we can add more properties to the flex container like:
+
+- flex-flow
+- justify-content
+- align-content
+- align-items
+
+We can then add properties to the FLEX-ITEMS:
+
+- order
+- flex
+- align-self
+
+We will just focus now on the Flex container how it works, how we can create it and what happens if we add all these different properties.
+And with that we have the basic theory set and these means we can now jump straight into the code
