@@ -31,3 +31,27 @@ We can then add properties to the FLEX-ITEMS:
 
 We will just focus now on the Flex container how it works, how we can create it and what happens if we add all these different properties.
 And with that we have the basic theory set and these means we can now jump straight into the code
+
+
+MAIN AXIS VS. CROSS AXIS
+
+Having a flex container we added a flex direction; flex-flow which is the flex direction and we added the property of row at the beginning. For our flex container means that the main axis goes from the top left corner to the right, and if we have a main axis we have a CROSS axis that start from the same position as the MAIN axis but goes DOWNWARDS.
+
+We can also change that we have row and row-reverse where the Main axis will start from the right top corner.
+
+If we set the flex direction to column the the MAIN axis goes from the top to the botton we changed the axis and the CROSS axis goes from the top left to the right.
+
+With flex direction column-reverse the Main axis starts from the bottom left corner and starting point of the Cross axis start from the bottom left corner to the right.
+
+
+ALIGN ITEMS AND JUSTIFY CONTENT
+
+flex-direction: row - this means we have our website and on our website  we have the MAIN axis starting in the top left corner and the CROSS axis also starting in the left top corner but going from TOP to BOTTOM.
+What happens now with JUSTIFY-CONTENT and ALIGN-ITEMS is that with justify-content we define the position of the elements along our MAIN axis and align-items simply define the position along the CROSS axis.
+
+Now in the view of the flex-direction: column perspective it change because our website we now have the CROSS axis going from LEFT TO RIGHT and the MAIN axis goes from TOP to BOTTOM. These has an impact on the align-items and on justify-content because align-items now refers to the CROSS axis but from LEFT to RIGTH and justify-content refers to the MAIN axis but now this refers from the TOP to BOTTOM.
+
+We can see all the values we can use here an pair with ?
+
+Under Properties section:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
