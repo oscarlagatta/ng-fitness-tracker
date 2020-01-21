@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   openSideNav = false;
-  title = 'fitness-tracker';
 }
