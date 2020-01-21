@@ -10,3 +10,10 @@ Flexbox Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 Flexbox Video: https://academind.com/learn/css/understanding-css/flexbox-basics-container
 
+More on the Tabs Component: https://material.angular.io/components/tabs/overview
+
+More on Spinners: https://material.angular.io/components/progress-spinner/overview
+
+More on Sidenav: https://material.angular.io/components/sidenav/overview
+
+More on the Toolbar: https://material.angular.io/components/toolbar/overview
