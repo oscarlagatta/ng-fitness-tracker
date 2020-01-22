@@ -1,5 +1,6 @@
 import { Subject } from 'rxjs/Subject';
 import { Exercise } from './excercise.model';
+import { NullTemplateVisitor } from '@angular/compiler';
 
 export class TrainingService {
   exerciseChanged = new Subject<Exercise>();
@@ -12,6 +13,7 @@ export class TrainingService {
   ];
 
   private runningExercise: Exercise;
+  private exercises: Exercise[] = [];
 
   getAvailableExercises() {
     return this.availableExcercises.slice();
@@ -22,6 +24,30 @@ export class TrainingService {
       ex => ex.id === selectedId
     );
     this.exerciseChanged.next({ ...this.runningExercise });
+  }
+
+  completeExercise() {
+    this.exercises.push({
+      ...this.runningExercise,
+      date: new Date(),
+      state: 'completed'
+    });
+    this.runningExercise = null;
+    // we have no running exercise
+    this.exerciseChanged.next(null);
+  }
+
+  cancelExercise(progress: number) {
+    this.exercises.push({
+      ...this.runningExercise,
+      duration: this.runningExercise.duration * (progress / 100),
+      calories: this.runningExercise.duration * (progress / 100),
+      date: new Date(),
+      state: 'cancelled'
+    });
+    this.runningExercise = null;
+    // we have no running exercise
+    this.exerciseChanged.next(null);
   }
 
   getRunningExercise() {
