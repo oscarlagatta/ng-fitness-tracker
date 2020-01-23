@@ -1,6 +1,8 @@
-# FitnessTracker
+# Fitness Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+Entire, realistic app, uses Google's Material Design and is extremely fast! Thanks to Firebase and Angularfire, adds real-time database functionalities and see updates almost before we make them!
+
+Behind the scenes, NgRx will be used - a Redux-inspired state management solution that can greatly enhance your Angular app.
 
 ## Development server
 
