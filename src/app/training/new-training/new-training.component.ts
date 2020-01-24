@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TrainingService } from '../training.service';
 import { Exercise } from '../exercise.model';
 import { NgForm } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { UIService } from 'src/app/shared/ui.service';
 
@@ -46,7 +46,11 @@ export class NewTrainingComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.exerciseSubscription.unsubscribe();
-    this.loadingSubscription.unsubscribe();
+    if (this.exerciseSubscription) {
+      this.exerciseSubscription.unsubscribe();
+    }
+    if (this.loadingSubscription) {
+      this.loadingSubscription.unsubscribe();
+    }
   }
 }

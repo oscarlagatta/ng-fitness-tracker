@@ -12,7 +12,6 @@ import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 import { UIService } from './shared/ui.service';
@@ -23,7 +22,6 @@ import { TrainingModule } from './training/training.module';
 @NgModule({
   declarations: [
     AppComponent,
-
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent
@@ -36,7 +34,6 @@ import { TrainingModule } from './training/training.module';
     AppRoutingModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
     AuthModule,
     TrainingModule
   ],
