@@ -15,13 +15,6 @@ import { Store } from '@ngrx/store';
 
 @Injectable()
 export class TrainingService {
-  exerciseChanged = new Subject<Exercise>();
-  exercisesChanged = new Subject<Exercise[]>();
-  finishedExercisesChanged = new Subject<Exercise[]>();
-
-  private availableExercises: Exercise[] = [];
-  private runningExercise: Exercise;
-
   private fbSubs: Subscription[] = [];
 
   constructor(
@@ -58,7 +51,6 @@ export class TrainingService {
               null,
               3000
             );
-            this.exercisesChanged.next(null);
           }
         )
     );
@@ -92,20 +84,18 @@ export class TrainingService {
           duration: ex.duration * (progress / 100),
           calories: ex.calories * (progress / 100),
           date: new Date(),
-          state: 'completed'
+          state: 'cancelled'
         });
         this.store.dispatch(new Training.StopTraining());
       });
   }
 
   fetchCompletedOrCancelledExercises() {
-    // return this.finishedExercises.slice();
     this.fbSubs.push(
       this.db
         .collection('finishedExercises')
         .valueChanges()
         .subscribe((exercises: Exercise[]) => {
-          // this.finishedExercisesChanged.next(exercises);
           this.store.dispatch(new Training.SetFinishedTrainigs(exercises));
         })
     );

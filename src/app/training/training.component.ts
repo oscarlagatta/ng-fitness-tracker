@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
 import { TrainingService } from './training.service';
 import { Store } from '@ngrx/store';
 import * as fromTraining from './training.reducer';
