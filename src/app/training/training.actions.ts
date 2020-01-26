@@ -6,7 +6,7 @@ export const SET_FINISHED_TRAININGS = '[Training] Set Finished Trainings';
 export const START_TRAINING = '[Training] Start Training';
 export const STOP_TRAINING = '[Training] Stop Training';
 
-export class SetAvailableTraining implements Action {
+export class SetAvailableTrainings implements Action {
   readonly type = SET_AVAILABLE_TRAININGS;
 
   constructor(public payload: Exercise[]) {}
@@ -21,7 +21,7 @@ export class SetFinishedTrainigs implements Action {
 export class StartTraining implements Action {
   readonly type = START_TRAINING;
 
-  constructor(public payload: Exercise) {}
+  constructor(public payload: string) {}
 }
 
 export class StopTraining implements Action {
@@ -29,7 +29,7 @@ export class StopTraining implements Action {
 }
 
 export type TrainingActions =
-  | SetAvailableTraining
+  | SetAvailableTrainings
   | SetFinishedTrainigs
   | StartTraining
   | StopTraining;
