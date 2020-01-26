@@ -1,0 +1,77 @@
+html {
+  background-color: #fa923f;
+  padding: 10px;
+}
+
+body {
+  background-color: yellow;
+  padding: 10px;
+  margin: 0;
+}
+
+/*flexbox*/
+
+.parent {
+  background-color: #f073e1;
+  margin: 10px;
+  padding: 30px;
+  display: flex;
+  /* display flex makes the .parent a container
+     and all the child elements will display in
+    a single row */
+  /* display inline-flex makes the .parent a container
+     and now behaves like an INLINE element it doesn't occupy
+     the entire space anymore it only needs the space that is
+     required to display the content. And if we decrease the
+     size of the window the elements won't decrease
+     its with */
+  /* NOW WE CAN CONTROL HOW THE ITEMS DISPLAY*/
+  /*flex-flow: row nowrap;*/ /* combines two (row for flex-direction) (nowrap and for flex-wrap) and these
+   are the standard values */
+  /* flex-flow: row wrap; */ /* wraps the element when the with of the container is not enough at
+  the point it will decrease the items size. Also the high of
+  some elements will decrease. Also we have wrap-reverse for the oppositte behavior  */
+  /*flex-flow: column wrap; */ /* elements are displayed as column and like a block level element behavior */
+  /* flex-flow: row-reverse wrap;*/ /* opposite to row but from a reverse perspective  */
+  flex-flow: row wrap; /* */
+  align-items: flex-start; /* center */ /* ALIGN ITEMS REFER TO THE CROSS AXIS...*/
+  justify-content: flex-end; /* flex-start */ /*center;*/ /* positioning of the items along the MAIN axis*/
+  align-content: center; /* centers the items */ /* space-between space between first line and second line only works when more than one line.*/
+}
+
+.div1 {
+  background-color: #f800db;
+  margin: 5px;
+}
+
+.div2 {
+  background-color: #f800db;
+  margin: 5px;
+  width: 150px;
+  font-size: 30px;
+}
+
+.div3 {
+  background-color: #f800db;
+  margin: 5px;
+  height: 150px;
+}
+
+.div4 {
+  background-color: #f800db;
+  margin: 5px;
+  width: 150px;
+  height: 150px;
+}
+
+.div5 {
+  background-color: #f800db;
+  margin: 5px;
+  width: 200px;
+}
+
+.div6 {
+  background-color: #f800db;
+  margin: 5px;
+  width: 200px;
+}

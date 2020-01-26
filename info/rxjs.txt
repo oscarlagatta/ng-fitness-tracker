@@ -1,0 +1,20 @@
+After version 6 the imports syntax changed, so you may need to install rxjs-compat
+To ensure is compatible with previous versions
+
+If you want to make it work without that package (which would have the advantage of saving some kbs on the final bundle), you'll have to do one simple adjustment:
+
+import { Subject } from 'rxjs';
+
+instead of
+
+import { Subject } from 'rxjs/Subject';
+
+and
+
+import { Subscription } from 'rxjs';
+
+instead of
+
+import { Subscription } from 'rxjs/Subscription';
+
+And that will be the general theme for the course by the way. Directly import from 'rxjs'  instead of 'rxjs/Something' .
